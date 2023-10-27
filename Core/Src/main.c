@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "FreeRTOS.h"
 #include "task.h"
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -41,17 +42,20 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-TaskHandle_t Task_1_handle;
-BaseType_t status;
-/* USER CODE BEGIN PV */
 
+/* USER CODE BEGIN PV */
+TaskHandle_t Task_1_handle;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
-void Task_1(void);
+uint16_t counter = 0;
+uint16_t counter_2 = 0;
+void Task_1(void* parameters);
+void Task_2(void* parameters);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -88,9 +92,12 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  status = xTaskCreate(Task_1, "Task_1", 4, "Hello world from task-1", 4, &Task_1_handle);
-  configASSERT(status == pdPASS);
+  BaseType_t retval = 0;
+  retval = xTaskCreate(Task_1, "Task_1", 100, "Hello from Task-1", 2, &Task_1_handle);
+  retval = xTaskCreate(Task_2, "Task_2", 100, "Hello from Task-2", 2, 0);
 
+  vTaskStartScheduler();
+  Task_1(&counter);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -176,8 +183,27 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void Task_1(void* parameters)
 {
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
 
+	while(1)
+	{
+		counter ++;
+
+		printf("%s\n",(char*) parameters);
+
+	}
+//	vTaskDelete(NULL);
+}
+
+void Task_2(void* parameters)
+{
+
+	while(1)
+	{
+		counter_2 ++;
+
+		printf("%s\n",(char*) parameters);
+	}
+//	vTaskDelete(NULL);
 }
 /* USER CODE END 4 */
 

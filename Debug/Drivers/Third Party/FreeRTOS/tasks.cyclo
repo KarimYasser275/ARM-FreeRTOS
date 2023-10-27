@@ -23,7 +23,7 @@
 ../Drivers/Third Party/FreeRTOS/tasks.c:2489:17:uxTaskGetSystemState	4
 ../Drivers/Third Party/FreeRTOS/tasks.c:2616:12:xTaskCatchUpTicks	1
 ../Drivers/Third Party/FreeRTOS/tasks.c:2720:12:xTaskIncrementTick	12
-../Drivers/Third Party/FreeRTOS/tasks.c:3009:6:vTaskSwitchContext	7
+../Drivers/Third Party/FreeRTOS/tasks.c:3009:6:vTaskSwitchContext	3
 ../Drivers/Third Party/FreeRTOS/tasks.c:3083:6:vTaskPlaceOnEventList	1
 ../Drivers/Third Party/FreeRTOS/tasks.c:3108:6:vTaskPlaceOnUnorderedEventList	1
 ../Drivers/Third Party/FreeRTOS/tasks.c:3169:12:xTaskRemoveFromEventList	5
