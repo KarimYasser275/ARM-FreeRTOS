@@ -56,6 +56,7 @@ uint16_t counter_2 = 0;
 void Task_1(void* parameters);
 void Task_2(void* parameters);
 
+#define DWT_CTRL	(*(volatile uint32_t*)0xE0001000)
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -93,11 +94,17 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
   BaseType_t retval = 0;
-  retval = xTaskCreate(Task_1, "Task_1", 100, "Hello from Task-1", 2, &Task_1_handle);
-  retval = xTaskCreate(Task_2, "Task_2", 100, "Hello from Task-2", 2, 0);
+
+  DWT_CTRL|=0x00000001;
+  SEGGER_SYSVIEW_Conf();
+  SEGGER_SYSVIEW_Start();
+
+  retval = xTaskCreate(Task_1, "Task_1", 200, "Hello from Task-1", 3, &Task_1_handle);
+  configASSERT(retval);
+  retval = xTaskCreate(Task_2, "Task_2", 200, "Hello from Task-2", 2, 0);
+  configASSERT(retval);
 
   vTaskStartScheduler();
-  Task_1(&counter);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -187,8 +194,11 @@ void Task_1(void* parameters)
 	while(1)
 	{
 		counter ++;
-
-		printf("%s\n",(char*) parameters);
+		char msg[100];
+//		printf("%s\n",(char*) parameters);
+		snprintf(msg , 100,"%s\n",(char*) parameters);
+		SEGGER_SYSVIEW_PrintfTarget(msg);
+		taskYIELD();
 
 	}
 //	vTaskDelete(NULL);
@@ -200,10 +210,13 @@ void Task_2(void* parameters)
 	while(1)
 	{
 		counter_2 ++;
+		char msg[100];
+//		printf("%s\n",(char*) parameters);
+		snprintf(msg , 100,"%s\n",(char*) parameters);
+		SEGGER_SYSVIEW_PrintfTarget(msg);
+		taskYIELD();
 
-		printf("%s\n",(char*) parameters);
-	}
-//	vTaskDelete(NULL);
+		}
 }
 /* USER CODE END 4 */
 

@@ -24,7 +24,14 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/FreeRTOS/include/FreeRTOS.h \
- ../Core/Inc/FreeRTOSConfig.h \
+ C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/FreeRTOS/FreeRTOSConfig.h \
+ C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h \
+ C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/SEGGER/SEGGER_SYSVIEW.h \
+ C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/SEGGER/SEGGER.h \
+ C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/Config/Global.h \
+ C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h \
+ C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/Config/SEGGER_SYSVIEW_Conf.h \
+ C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/Config/SEGGER_RTT_Conf.h \
  C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/FreeRTOS/include/projdefs.h \
  C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/FreeRTOS/include/portable.h \
  C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/FreeRTOS/include/deprecated_definitions.h \
@@ -58,7 +65,14 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/FreeRTOS/include/FreeRTOS.h:
-../Core/Inc/FreeRTOSConfig.h:
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/FreeRTOS/FreeRTOSConfig.h:
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h:
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/SEGGER/SEGGER_SYSVIEW.h:
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/SEGGER/SEGGER.h:
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/Config/Global.h:
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h:
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/Config/SEGGER_SYSVIEW_Conf.h:
+C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/SEGGER/Config/SEGGER_RTT_Conf.h:
 C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/FreeRTOS/include/projdefs.h:
 C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/FreeRTOS/include/portable.h:
 C:/Users/e0162112/STM32CubeIDE/workspace_1.13.0/ARM-FreeRTOS/Drivers/Third\ Party/FreeRTOS/include/deprecated_definitions.h:

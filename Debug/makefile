@@ -9,6 +9,10 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Drivers/Third\ Party/SEGGER/SEGGER/Syscalls/subdir.mk
+-include Drivers/Third\ Party/SEGGER/SEGGER/subdir.mk
+-include Drivers/Third\ Party/SEGGER/OS/subdir.mk
+-include Drivers/Third\ Party/SEGGER/Config/subdir.mk
 -include Drivers/Third\ Party/FreeRTOS/portable/MemMang/subdir.mk
 -include Drivers/Third\ Party/FreeRTOS/portable/GCC/ARM_CM3/subdir.mk
 -include Drivers/Third\ Party/FreeRTOS/subdir.mk

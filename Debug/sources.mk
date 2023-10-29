@@ -28,4 +28,8 @@ Drivers/STM32F1xx_HAL_Driver/Src \
 Drivers/Third\ Party/FreeRTOS \
 Drivers/Third\ Party/FreeRTOS/portable/GCC/ARM_CM3 \
 Drivers/Third\ Party/FreeRTOS/portable/MemMang \
+Drivers/Third\ Party/SEGGER/Config \
+Drivers/Third\ Party/SEGGER/OS \
+Drivers/Third\ Party/SEGGER/SEGGER \
+Drivers/Third\ Party/SEGGER/SEGGER/Syscalls \
 
