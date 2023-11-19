@@ -211,7 +211,7 @@ void Task_2(void* parameters)
 	{
 		counter_2 ++;
 		char msg[100];
-//		printf("%s\n",(char*) parameters);
+		printf("%s\n",(char*) parameters);
 		snprintf(msg , 100,"%s\n",(char*) parameters);
 		SEGGER_SYSVIEW_PrintfTarget(msg);
 		taskYIELD();
